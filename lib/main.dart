@@ -4,10 +4,12 @@ import 'package:widgets_learning/checkbox_screen.dart';
 import 'package:widgets_learning/dropdown_button_screen.dart';
 import 'package:widgets_learning/expansion_panel_screen.dart';
 import 'package:widgets_learning/expansion_tile_and_list_tile_screen.dart';
+import 'package:widgets_learning/focus_shortcuts_actions_screen.dart';
 import 'package:widgets_learning/modal_botttom_sheet_screen.dart';
 import 'package:widgets_learning/page_view_screen.dart';
 import 'package:widgets_learning/popup_dialog_screen.dart';
 import 'package:widgets_learning/popup_menu_screen.dart';
+import 'package:widgets_learning/rating_bar_screen.dart';
 import 'package:widgets_learning/tabbar_screen.dart';
 
 void main() {
@@ -42,7 +44,9 @@ class MyHomePage extends StatelessWidget {
   'Expansion Panel',
   'Appbar',
   'Tabbar',
-  'Popup Menu'];
+  'Popup Menu',
+  'Focus Shortcut and Actions',
+  'Rating Bar'];
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +89,12 @@ class MyHomePage extends StatelessWidget {
                   }else if(widgets[index] == 'Popup Menu'){
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) =>  PopupMenuScreen()));
+                  }else if(widgets[index] == 'Focus Shortcut and Actions'){
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>  FocusShortcutsActionsScreen()));
+                  }else if(widgets[index] == 'Rating Bar'){
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>  RatingBarScreen()));
                   }
                 },
                 child: Card(
